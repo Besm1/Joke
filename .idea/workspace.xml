@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d980028-7108-4230-8cb4-c3e3d1f565ce" name="Changes" comment="Вторая версия">
+      <change afterPath="$PROJECT_DIR$/Joke_1apr_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Joke_1apr_3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Joke_1apr.py" beforeDir="false" afterPath="$PROJECT_DIR$/Joke_1apr.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Joke_4ever.py" beforeDir="false" afterPath="$PROJECT_DIR$/Joke_4ever.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +47,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.Joke_1apr.executor": "Debug",
+    "Python.Joke_1apr.executor": "Run",
     "Python.Joke_4ever.executor": "Run",
     "Python.main.executor": "Run",
     "Python.scr.executor": "Run",
@@ -137,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726069484674</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Вторая версия">
+      <option name="closed" value="true" />
+      <created>1726071338368</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1726071338368</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,21 +163,5 @@
     <MESSAGE value="Первая версия" />
     <MESSAGE value="Вторая версия" />
     <option name="LAST_COMMIT_MESSAGE" value="Вторая версия" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Joke_1apr.py</url>
-          <line>31</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Joke_1apr.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

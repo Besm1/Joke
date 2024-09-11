@@ -6,8 +6,17 @@ from datetime import datetime as dt
 ANCHOR_PLACES = ('n', 'e', 's', 'w', 'ne', 'nw', 'se', 'sw')
 TIME_TO_RUN = 15    # время (сек), в течение которого кнопка убегает от мыши
 
+mouse_x = 0  # Координаты мыши
+mouse_y = 0
+
+start_time = 0  # Объявление глобальной переменной, обозначающей время начала "ловли" кнопки юзером
+btn_state = 0  # предполагаем три состояния кнопки: 0 - не начала убегать, 1 - убегает и 2 - остановилась
+
+root = Tk()
+
+
 def get_mouse_coord(event):
-    global mouse_y, mouse_x
+    # global mouse_y, mouse_x
     mouse_x = event.x
     mouse_y = event.y
     # label.config(text=f'x={mouse_x}, y={mouse_y}')
@@ -21,7 +30,7 @@ def entered(event):
         start_time = dt.now()
         button_jump()
     elif btn_state == 1:  # продолжаем убегать...
-        if (dt.now() - start_time).seconds >= TIME_TO_RUN:  #start_time > TIME_TO_RUN:
+        if (dt.now() - start_time).seconds > TIME_TO_RUN:  #start_time > TIME_TO_RUN:
             btn_state = 2   # Кончили убегать
         else:
             button_jump()
