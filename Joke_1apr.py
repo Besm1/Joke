@@ -26,14 +26,14 @@ def entered(event):
         else:
             button_jump()
 
-def get_new_coords(root, btn):
+def get_new_btn_coords(root, btn):
     return randint(0, root.winfo_width() - btn.winfo_width() - 1), randint(0, root.winfo_height() - btn.winfo_height() - 1)
 
 def button_jump():
     global mouse_y, mouse_x, root, btn
-    x_new , y_new = get_new_coords(root, btn)
+    x_new , y_new = get_new_btn_coords(root, btn)
     while x_new <= mouse_x <= x_new + btn.winfo_width() and y_new <= mouse_y <= y_new + btn.winfo_height():
-        x_new, y_new = get_new_coords(root, btn)
+        x_new, y_new = get_new_btn_coords(root, btn)
     btn.place(x=x_new, y=y_new)
 
 def button_click():
