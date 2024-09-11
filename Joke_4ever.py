@@ -4,7 +4,7 @@ from random import randint
 from datetime import datetime as dt
 
 ANCHOR_PLACES = ('n', 'e', 's', 'w', 'ne', 'nw', 'se', 'sw')
-TIME_TO_RUN = 0    # время (сек), в течение которого кнопка убегает от мыши
+TIME_TO_RUN = 5    # время (сек), в течение которого кнопка убегает от мыши
 
 def get_mouse_coord(event):
     mouse_x = event.x
@@ -35,10 +35,7 @@ def button_jump():
     btn.place(x=x_new, y=y_new)
 
 def button_click():
-    global label, img, root, btn
-    # root.config(height=img.height(), width=img.width())
-    # root.geometry()
-    btn.destroy()
+    global label
     label.pack(expand=1)
 
 if __name__ == '__main__':
@@ -59,10 +56,8 @@ if __name__ == '__main__':
     btn.bind('<Enter>', entered)
 
     img = PhotoImage(file='smile.png')
-
-    label = Label(text='С первым апреля!', image=img, compound="top")
-    # label = Label(text='С первым апреля!', font=("Times New Roman", 14))
-
+    # label = Label(text='С первым апреля!', image=PhotoImage, compound="bottom")
+    label = Label(text='С первым апреля!', font=("Times New Roman", 14))
 
     # label = Label()
     # label.pack(expand=1)
