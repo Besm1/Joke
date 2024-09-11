@@ -4,9 +4,10 @@ from random import randint
 from datetime import datetime as dt
 
 ANCHOR_PLACES = ('n', 'e', 's', 'w', 'ne', 'nw', 'se', 'sw')
-TIME_TO_RUN = 5    # время (сек), в течение которого кнопка убегает от мыши
+TIME_TO_RUN = 15    # время (сек), в течение которого кнопка убегает от мыши
 
 def get_mouse_coord(event):
+    global mouse_y, mouse_x
     mouse_x = event.x
     mouse_y = event.y
     # label.config(text=f'x={mouse_x}, y={mouse_y}')
@@ -25,17 +26,19 @@ def entered(event):
         else:
             button_jump()
 
+def get_new_coords(root, btn):
+    return randint(0, root.winfo_width() - btn.winfo_width() - 1), randint(0, root.winfo_height() - btn.winfo_height() - 1)
 
 def button_jump():
-    x_new = randint(0, root.winfo_width() - btn.winfo_width() - 1)
-    y_new = randint(0, root.winfo_height() - btn.winfo_height() - 1)
+    global mouse_y, mouse_x, root, btn
+    x_new , y_new = get_new_coords(root, btn)
     while x_new <= mouse_x <= x_new + btn.winfo_width() and y_new <= mouse_y <= y_new + btn.winfo_height():
-        x_new = randint(0, root.winfo_width()-btn.winfo_width() - 1)
-        y_new = randint(0, root.winfo_height()-btn.winfo_height() - 1)
+        x_new, y_new = get_new_coords(root, btn)
     btn.place(x=x_new, y=y_new)
 
 def button_click():
-    global label
+    global label, btn
+    btn.destroy()
     label.pack(expand=1)
 
 if __name__ == '__main__':
@@ -57,7 +60,7 @@ if __name__ == '__main__':
 
     img = PhotoImage(file='smile.png')
     # label = Label(text='С первым апреля!', image=PhotoImage, compound="bottom")
-    label = Label(text='С первым апреля!', font=("Times New Roman", 14))
+    label = Label(text='С первым апреля!', font=("Times New Roman", 14), image=img, compound="bottom")
 
     # label = Label()
     # label.pack(expand=1)

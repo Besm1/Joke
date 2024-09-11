@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d980028-7108-4230-8cb4-c3e3d1f565ce" name="Changes" comment="Вторая версия">
-      <change afterPath="$PROJECT_DIR$/Joke_4ever.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Joke_1apr.py" beforeDir="false" afterPath="$PROJECT_DIR$/Joke_1apr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Joke_4ever.py" beforeDir="false" afterPath="$PROJECT_DIR$/Joke_4ever.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +47,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.Joke_1apr.executor": "Run",
+    "Python.Joke_1apr.executor": "Debug",
+    "Python.Joke_4ever.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.scr.executor": "Run",
     "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -127,12 +129,47 @@
       <option name="project" value="LOCAL" />
       <updated>1726056134887</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Вторая версия">
+      <option name="closed" value="true" />
+      <created>1726069484674</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1726069484674</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Первая версия" />
     <MESSAGE value="Вторая версия" />
     <option name="LAST_COMMIT_MESSAGE" value="Вторая версия" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Joke_1apr.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Joke_1apr.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
