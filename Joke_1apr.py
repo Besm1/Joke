@@ -16,6 +16,10 @@ def get_mouse_coord(event):
 
 def entered(event):
     global btn_state, start_time
+    global mouse_y, mouse_x, btn
+    # print(f'mouse:\t{mouse_x},\t{mouse_y}')   # Оказалось, что координаты event считаются от начала координат объекта,
+    # print(f'event:\t{event.x},\t{event.y}')   # вызвавшего это событие. Т.е. здесь координаты объекта + координаты
+    # print(f'button:\t{btn.winfo_x()},\t{btn.winfo_y()}')  # события = координаты мыши в окне root.
     if btn_state == 0:   # 1-й раз дотронулись до кнопки - начинаем отсчёт времени!
         btn_state = 1   # начинаем убегать!
         start_time = dt.now()
