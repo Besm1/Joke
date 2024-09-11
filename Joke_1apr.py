@@ -21,7 +21,7 @@ def entered(event):
         start_time = dt.now()
         button_jump()
     elif btn_state == 1:  # продолжаем убегать...
-        if (dt.now() - start_time).seconds >= TIME_TO_RUN:  #start_time > TIME_TO_RUN:
+        if (dt.now() - start_time).seconds >= TIME_TO_RUN:
             btn_state = 2   # Кончили убегать
         else:
             button_jump()
