@@ -29,19 +29,20 @@ class Joke:
         mainloop()
 
     def entered(self, event):
-            self.button_jump(event, self.btn_no)
+            self.button_jump(event, self.btn_no, self.btn_yes)
             # self.button_jump(event.x, event.y, self.btn_no)
 
     def get_new_coords(self, btn):
         return (randint(0, self.root.winfo_width() - btn.winfo_width() - 1),
                 randint(0, self.root.winfo_height() - btn.winfo_height() - 1))
 
-    def button_jump(self, event, btn):
-    # def button_jump(self, event_x, event_y, btn):
+    def button_jump(self, event, btn:Button, btn1:Button):
         mouse_x = btn.winfo_x() + event.x
         mouse_y = btn.winfo_y() + event.y
         x_new , y_new = self.get_new_coords(btn)
-        while x_new <= mouse_x <= x_new + btn.winfo_width() and y_new <= mouse_y <= y_new + btn.winfo_height():
+        while ((x_new <= mouse_x <= x_new + btn.winfo_width() and y_new <= mouse_y <= y_new + btn.winfo_height()) or
+                (x_new <= btn1.winfo_x() + btn1.winfo_width() and  x_new + btn.winfo_width() >= btn1.winfo_x()
+                and y_new <= btn1.winfo_y() + btn1.winfo_height() and  y_new + btn.winfo_height() >= btn1.winfo_y())):
             x_new, y_new = self.get_new_coords(btn)
         btn.place(x=x_new, y=y_new)
 
