@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d980028-7108-4230-8cb4-c3e3d1f565ce" name="Changes" comment="Вторая версия" />
+    <list default="true" id="9d980028-7108-4230-8cb4-c3e3d1f565ce" name="Changes" comment="Вторая версия">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Joke_1apr_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Joke_1apr_2.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,18 +44,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Joke_1apr.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Joke_4ever.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scr.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/b.smirnov/Documents/pythonProjectsForUniversity/Joke&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Joke_1apr.executor": "Run",
+    "Python.Joke_1apr_2.executor": "Run",
+    "Python.Joke_4ever.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.scr.executor": "Run",
+    "Python.test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/b.smirnov/Documents/pythonProjectsForUniversity/Joke"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Joke_1apr" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Joke" />
@@ -173,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726088065963</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Вторая версия">
+      <option name="closed" value="true" />
+      <created>1726134530723</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1726134530723</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
