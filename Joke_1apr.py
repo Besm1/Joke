@@ -1,5 +1,4 @@
 from tkinter import *
-from tkinter import ttk
 from random import randint
 from datetime import datetime as dt
 
@@ -16,7 +15,7 @@ def get_mouse_coord(event):
 
 def entered(event):
     global btn_state, start_time
-    global mouse_y, mouse_x, btn
+    # global mouse_y, mouse_x, btn
     # print(f'mouse:\t{mouse_x},\t{mouse_y}')   # Оказалось, что координаты event считаются от начала координат объекта,
     # print(f'event:\t{event.x},\t{event.y}')   # вызвавшего это событие. Т.е. здесь координаты объекта + координаты
     # print(f'button:\t{btn.winfo_x()},\t{btn.winfo_y()}')  # события = координаты мыши в окне root.
