@@ -23,41 +23,38 @@ class Joke:
         self.img = PhotoImage(file='smile.png')
         self.label = Label(text='С первым апреля!', font=("Times New Roman", 14), image=self.img, compound="bottom")
 
-    def start(self):
         mainloop()
 
     def entered(self, event):
         if self.btn_state == 0:   # 1-й раз дотронулись до кнопки - начинаем отсчёт времени!
             self.btn_state = 1   # начинаем убегать!
             self.start_time = dt.now()
-            self.button_jump(event.x, event.y)
+            self.button_jump(event)
         elif self.btn_state == 1:  # продолжаем убегать...
             if (dt.now() - self.start_time).seconds > self.TIME_TO_RUN:  #start_time > TIME_TO_RUN:
                 self.btn_state = 2   # Кончили убегать
             else:
-                self.button_jump( event.x, event.y)
+                self.button_jump( event)
 
     def get_new_coords(self):
         return (randint(0, self.root.winfo_width() - self.btn.winfo_width() - 1),
                 randint(0, self.root.winfo_height() - self.btn.winfo_height() - 1))
 
-    def button_jump(self, event_x, event_y):
-        # global mouse_y, mouse_x, root, btn
-        mouse_x = self.btn.winfo_x() + event_x
-        mouse_y = self.btn.winfo_y() + event_y
+    def button_jump(self, event):
+        mouse_x = self.btn.winfo_x() + event.x
+        mouse_y = self.btn.winfo_y() + event.y
         x_new , y_new = self.get_new_coords()
         while x_new <= mouse_x <= x_new + self.btn.winfo_width() and y_new <= mouse_y <= y_new + self.btn.winfo_height():
             x_new, y_new = self.get_new_coords()
         self.btn.place(x=x_new, y=y_new)
 
     def button_click(self):
-        # global label, btn
         self.btn.destroy()
         self.label.pack(expand=1)
 
 if __name__ == '__main__':
     joke = Joke()
-    joke.start()
+
 
 
 

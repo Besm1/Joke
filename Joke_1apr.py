@@ -57,7 +57,7 @@ if __name__ == '__main__':
     root.title("Joke & Smoke")
     root.geometry("300x250+800+400")
 
-    btn = Button(text = 'Нажми меня!', command=button_click)
+    btn = Button(text = 'Да!', command=button_click )
     btn.pack(expand=1)
     btn.bind('<Enter>', entered)
 
