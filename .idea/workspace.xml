@@ -234,7 +234,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726226434132</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Вторая версия">
+      <option name="closed" value="true" />
+      <created>1726230126420</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1726230126420</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -258,7 +266,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Joke_4ever.py</url>
-          <line>68</line>
+          <line>69</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>

@@ -19,7 +19,9 @@ class Joke:
 
         # self.root.bind('<Motion>', self.get_mouse_coord)
 
-        self.label = Label(text='С первым апреля!', font=("Times New Roman", 14))
+        self.label = Label(text='Ваш честный ответ будут передан в отдел кадров.', font=("Times New Roman", 10), anchor='n')
+        self.question = Label(text='Вы довольны\nуровнем своей зарплаты?', font=("Times New Roman", 14), anchor='s')
+        self.question.pack()
 
         self.btn_no_home = None
         self.in_place = True
@@ -34,7 +36,7 @@ class Joke:
                                 self.btn_no.winfo_x() + self.btn_no.winfo_width(),
                                 self.btn_no.winfo_y()  + self.btn_no.winfo_height())
         if self.in_place:
-            self.button_jump(event, self.btn_no, self.btn_yes)
+            self.button_jump(event, self.btn_no)
         else:
             self.btn_no.place(x=self.btn_no_home[0], y=self.btn_no_home[1])
         self.in_place = not self.in_place
@@ -45,13 +47,13 @@ class Joke:
                 randint(0, self.root.winfo_height() - btn.winfo_height() - 1))
 
 
-    def button_jump(self, event, btn:Button, btn1:Button):
+    def button_jump(self, event, btn:Button):
         btn_new = self.get_new_coords(btn)
         btn_new_coords = (btn_new[0],btn_new[1], btn_new[0] + self.btn_no.winfo_width()
                                 , btn_new[1] +self.btn_no.winfo_height())
         # while (btn_new[0] <= btn1.winfo_x() + btn1.winfo_width() and  btn_new[0] + btn.winfo_width() >= btn1.winfo_x()
         #         and btn_new[1] <= btn1.winfo_y() + btn1.winfo_height() and  btn_new[1] + btn.winfo_height() >= btn1.winfo_y()):
-        while intersection(btn_new_coords, w_coords(btn1)):
+        while any(intersection(btn_new_coords, w_coords(w_)) for w_ in (self.btn_yes, self.question))  :
             btn_new = self.get_new_coords(btn)
             btn_new_coords = (btn_new[0],btn_new[1], btn_new[0] + self.btn_no.winfo_width()
                                 , btn_new[1] +self.btn_no.winfo_height())
