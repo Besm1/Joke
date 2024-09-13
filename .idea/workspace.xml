@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9d980028-7108-4230-8cb4-c3e3d1f565ce" name="Changes" comment="Вторая версия">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Joke_4ever.py" beforeDir="false" afterPath="$PROJECT_DIR$/Joke_4ever.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +257,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726231984429</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Вторая версия">
+      <option name="closed" value="true" />
+      <created>1726242583162</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1726242583163</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Вторая версия">
+      <option name="closed" value="true" />
+      <created>1726243817065</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1726243817065</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

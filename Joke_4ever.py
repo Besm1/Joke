@@ -98,4 +98,3 @@ def w_coords(w:Widget):
 
 if __name__ == '__main__':
     joke = Joke_From_HR()
-
