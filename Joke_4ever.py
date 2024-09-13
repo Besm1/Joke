@@ -23,14 +23,29 @@ class Joke:
         self.btn_no.place(x=165, y=112)
         self.btn_no.bind('<Enter>', self.entered)
 
+        self.root.bind('<Motion>', self.get_mouse_coord)
+
         self.img = PhotoImage(file='smile.png')
         self.label = Label(text='С первым апреля!', font=("Times New Roman", 14), image=self.img, compound="bottom")
 
+        self.btn_no_home = None
+
         mainloop()
+        print('start')
+
+    def get_mouse_coord(self, event):
+        self.mouse_at = (event.x, event.y)
+
+
 
     def entered(self, event):
-            self.button_jump(event, self.btn_no, self.btn_yes)
-            # self.button_jump(event.x, event.y, self.btn_no)
+        if self.btn_no_home == None:  # Определим границы начального положения кнопки "Нет"
+            self.btn_no_home = (self.btn_no.winfo_x(),
+                                self.btn_no.winfo_y(),
+                                self.btn_no.winfo_x() + self.btn_no.winfo_width(),
+                                self.btn_no.winfo_y()  + self.btn_no.winfo_width())
+        self.button_jump(event, self.btn_no, self.btn_yes)
+
 
     def get_new_coords(self, btn):
         return (randint(0, self.root.winfo_width() - btn.winfo_width() - 1),
