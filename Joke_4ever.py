@@ -1,3 +1,4 @@
+from idlelib.colorizer import color_config
 from os import cpu_count
 from tkinter import *
 from random import randint
@@ -7,7 +8,7 @@ class Joke:
 
     def __init__(self):
         self.root = Tk()
-        self.root.title("Joke & Smoke")
+        self.root.title("It's NO joke!")
         self.root.geometry("300x250+800+400")
 
         self.btn_yes = Button(text = 'Да', command=self.button_click, height=1, width=6, padx=5)
@@ -19,7 +20,7 @@ class Joke:
 
         # self.root.bind('<Motion>', self.get_mouse_coord)
 
-        self.label = Label(text='Ваш честный ответ будут передан в отдел кадров.', font=("Times New Roman", 10), anchor='n')
+        self.label = Label(text='Ваш честный ответ будет\nпередан в отдел кадров.', font=("Times New Roman", 16))
         self.question = Label(text='Вы довольны\nуровнем своей зарплаты?', font=("Times New Roman", 14), anchor='s')
         self.question.pack()
 
@@ -60,8 +61,8 @@ class Joke:
         btn.place(x=btn_new[0], y=btn_new[1])
 
     def button_click(self):
-
-        self.label.pack(expand=1)
+        self.btn_no.destroy()
+        self.label.pack(side=BOTTOM)
 
 def w_coords(w:Widget):
     return w.winfo_x(), w.winfo_y(), w.winfo_x() + w.winfo_width(), w.winfo_y() + w.winfo_height()
