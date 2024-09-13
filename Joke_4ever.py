@@ -1,10 +1,9 @@
+from os import cpu_count
 from tkinter import *
 from random import randint
-from copy import deepcopy
+
 
 class Joke:
-
-    root = None
 
     def __init__(self):
         self.root = Tk()
@@ -20,8 +19,7 @@ class Joke:
 
         # self.root.bind('<Motion>', self.get_mouse_coord)
 
-        self.img = PhotoImage(file='smile.png')
-        self.label = Label(text='С первым апреля!', font=("Times New Roman", 14), image=self.img, compound="bottom")
+        self.label = Label(text='С первым апреля!', font=("Times New Roman", 14))
 
         self.btn_no_home = None
         self.in_place = True
@@ -46,17 +44,33 @@ class Joke:
         return (randint(0, self.root.winfo_width() - btn.winfo_width() - 1),
                 randint(0, self.root.winfo_height() - btn.winfo_height() - 1))
 
+
     def button_jump(self, event, btn:Button, btn1:Button):
         btn_new = self.get_new_coords(btn)
-        while (btn_new[0] <= btn1.winfo_x() + btn1.winfo_width() and  btn_new[0] + btn.winfo_width() >= btn1.winfo_x()
-                and btn_new[1] <= btn1.winfo_y() + btn1.winfo_height() and  btn_new[1] + btn.winfo_height() >= btn1.winfo_y()):
+        btn_new_coords = (btn_new[0],btn_new[1], btn_new[0] + self.btn_no.winfo_width()
+                                , btn_new[1] +self.btn_no.winfo_height())
+        # while (btn_new[0] <= btn1.winfo_x() + btn1.winfo_width() and  btn_new[0] + btn.winfo_width() >= btn1.winfo_x()
+        #         and btn_new[1] <= btn1.winfo_y() + btn1.winfo_height() and  btn_new[1] + btn.winfo_height() >= btn1.winfo_y()):
+        while intersection(btn_new_coords, w_coords(btn1)):
             btn_new = self.get_new_coords(btn)
+            btn_new_coords = (btn_new[0],btn_new[1], btn_new[0] + self.btn_no.winfo_width()
+                                , btn_new[1] +self.btn_no.winfo_height())
         btn.place(x=btn_new[0], y=btn_new[1])
 
     def button_click(self):
 
         self.label.pack(expand=1)
 
+def w_coords(w:Widget):
+    return w.winfo_x(), w.winfo_y(), w.winfo_x() + w.winfo_width(), w.winfo_y() + w.winfo_height()
+
+def intersection(coords1, coords2) -> bool:
+    if (isinstance(coords1, (tuple, list, set)) and len(coords1) == 4
+            and isinstance(coords2, (tuple, list, set)) and len(coords2) == 4):
+        return (coords1[0] <= coords2[2] and coords1[2] >= coords2[0]
+                and coords1[1] <= coords2[3] and coords1[3] >= coords2[1])
+    else:
+        return False
 
 if __name__ == '__main__':
     joke = Joke()

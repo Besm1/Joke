@@ -226,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726222236114</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Вторая версия">
+      <option name="closed" value="true" />
+      <created>1726226434132</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1726226434132</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -246,10 +254,20 @@
     <option name="LAST_COMMIT_MESSAGE" value="Вторая версия" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Joke_4ever.py</url>
+          <line>68</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="self.btn_no_home" />
         <watch expression="self.mouse_at" />
+        <watch expression="self.in_place" />
       </configuration>
     </watches-manager>
   </component>
