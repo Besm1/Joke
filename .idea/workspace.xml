@@ -41,20 +41,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Joke_1apr.executor": "Run",
-    "Python.Joke_1apr_2.executor": "Run",
-    "Python.Joke_1apr_3.executor": "Run",
-    "Python.Joke_4ever.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.scr.executor": "Run",
-    "Python.test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/b.smirnov/Documents/pythonProjectsForUniversity/Joke"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Joke_1apr.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Joke_1apr_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Joke_1apr_3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Joke_4ever.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scr.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/b.smirnov/Documents/pythonProjectsForUniversity/Theme_7/pythonProject&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Joke_1apr" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Joke" />
@@ -287,7 +287,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726261716082</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Вторая версия">
+      <option name="closed" value="true" />
+      <created>1726337608858</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1726337608858</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

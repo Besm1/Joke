@@ -37,6 +37,7 @@ class Joke_From_HR:
                                                         # правый нижний угол:
                                 self.btn_no.winfo_x() + self.btn_no.winfo_width(),
                                 self.btn_no.winfo_y()  + self.btn_no.winfo_height())
+            print(self.btn_no_home)
         if self.btn_no_at_home:   # Если кнопка "Нет" на своём месте, то переместим её
             self.button_jump(event, self.btn_no)
         else:   # Иначе восстановим на своё место.
@@ -57,7 +58,7 @@ class Joke_From_HR:
                           , btn_new[0] + self.btn_no.winfo_width()  # ниже - нижний правый угол
                           , btn_new[1] +self.btn_no.winfo_height())
 
-        # пока есть пересечение кнопки в новом положении с любым их виджетов на экране, ищем новые координаты
+        # пока есть пересечение кнопки в новом положении с любым из виджетов на экране, ищем новые координаты
         while any(intersection(btn_new_coords, w_) for w_ in (self.btn_yes, self.question, self.btn_no_home))  :
             btn_new = self.get_new_coords(btn)
             btn_new_coords = (btn_new[0],btn_new[1], btn_new[0] + self.btn_no.winfo_width()
